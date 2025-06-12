@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UP22MOTO – Premium Bike & Car Rentals</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Book Now</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Make your journey exciting with UP22MOTO</h1>
+    <p>Sign in or register to book a ride</p>
+
+    
+    <form class="search-form" action="browse.html" method="get">
+      <select name="city" id="city-dropdown" required>
+        <option value="" disabled selected>Search by location ...</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Lucknow">Lucknow</option>
+        <option value="Ghaziabad">Ghaziabad</option>
+        <option value="Meerut">Meerut</option>
+        <option value="Moradabad">Moradabad</option>
+        <option value="Rampur">Rampur</option>
+        <option value="Rudrapur">Rudrapur</option>
+        <option value="Bilaspur">Bilaspur</option>
+        <option value="Haldwani">Haldwani</option>
+        <option value="Kanpur">Kanpur</option>
+        <option value="Noida">Noida</option>
+        <option value="Dehradun">Dehradun</option>
+        <option value="Agra">Agra</option>
+      </select>
+      <button type="submit">Rent a Vehicle</button>
+    </form>
+
+    <img src="assets/ghibli-leh.png" alt="Road trip in Leh" class="bullet-img" height="200" width="200" />
+  </section>
+
+  <section class="booking container">
+    <h2>Book a vehicle with us and get exciting offers</h2>
+    <div class="carousel">
+      <div class="slides">
+        <img src="assets/bikec.png" alt="Bike rental" class="slide vehicle-img active" />
+        <img src="assets/carc.png" alt="Car rental" class="slide vehicle-img" />
+        <img src="assets/scootyc.png" alt="Scooty rental" class="slide vehicle-img" />
+      </div>
+    </div>
+  </section>
+
+  <section class="features container">
+    <h2>Why Choose Us</h2>
+    <ul class="feature-grid">
+      <li><strong>Flexible Subscription Plans</strong></li>
+      <li><strong>Instant 24/7 Support & Roadside Assistance</strong></li>
+      <li><strong>Real-Time Vehicle Tracking</strong></li>
+      <li><strong>Instant Swap Service</strong></li>
+    </ul>
+  </section>
+
+  <section class="testimonials container">
+  <h2>What Users Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-slide">
+      <img src="assets/img1.png" alt="Profile of Badal Saxena" />
+      <p>"Great service and reliable vehicles!"</p>
+      <cite>– Badal Saxena</cite>
+    </div>
+    <div class="testimonial-slide">
+      <img src="assets/img2.png" alt="Profile of satisfied user" />
+      <p>"Easy booking—highly recommend!"</p>
+      <cite>– Rohit Sharma</cite>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="container">
+    <img src="assets/logo-transparent.png" height="150" width="150" alt="UP22MOTO transparent logo" />
+    <nav class="footer-links">
+  <ul>
+    <li><a href="tel:+919876543210">Phone</a></li>
+    <li><a href="mailto:support@up22moto.com">Email</a></li>
+  </ul>
+</nav>
+
+    <form class="newsletter">
+      <input type="email" placeholder="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p>© 2025 UP22MOTO. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

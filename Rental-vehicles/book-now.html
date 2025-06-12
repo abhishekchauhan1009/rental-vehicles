@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Now - UP22MOTO</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link your external CSS -->
+  <style>
+    /* You can move this to your styles.css */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #1c9341;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #27684d;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #006600;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Book Your Ride Now🚘 </h1>
+
+  <button onclick="showBookingMessage()">Book Now</button>
+
+  <div id="message">Booking Starts Soon!🙂</div>
+
+  <script>
+    function showBookingMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

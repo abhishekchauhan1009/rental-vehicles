@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – UP22MOTO</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Book Now</a>
+        <a href="about.html">About</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <h1>Login to UP22MOTO</h1>
+
+    <!-- Success/Error Message -->
+    <div id="message-box"></div>
+
+    <!-- Login Form -->
+    <form class="login-form" onsubmit="return handleLogin(event)">
+      <div class="form-row">
+        <label for="email/Phone">Email/Phone</label>
+        <input type="email/Phone" id="email/Phone" placeholder="Enter your email / Phone" required />
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+
+      <div class="form-row show-password-row">
+        <label></label>
+        <button type="button" onclick="togglePassword()">Show Password</button>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Social Login -->
+    <div class="social-login">
+      <p>or login with</p>
+      <button class="google-btn">Login with Google</button>
+      
+    </div>
+
+    <!-- Register Link -->
+    <div class="login-link">
+  <p>Don't have an account? <a href="register.html">Register here</a></p>
+</div>
+
+  </main>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      const btn = pwd.nextElementSibling;
+      if (pwd.type === "password") {
+        pwd.type = "text";
+        btn.textContent = "Hide Password";
+      } else {
+        pwd.type = "password";
+        btn.textContent = "Show Password";
+      }
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const messageBox = document.getElementById("message-box");
+
+      // Dummy check for demonstration
+      if (email === "user@example.com" && password === "password") {
+        messageBox.innerHTML = '<p class="success-msg">✅ Login successful!</p>';
+      } else {
+        messageBox.innerHTML = '<p class="error-msg">❌ Invalid email or password.</p>';
+      }
+    }
+  </script>
+</body>
+</html>

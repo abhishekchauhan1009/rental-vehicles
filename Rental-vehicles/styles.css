@@ -1,0 +1,787 @@
+/* ===== HEADER ===== */
+header {
+  background-image: url('assets/logo-transparent.png');
+  background-size: cover;         /* Stretch logo to fill */
+  background-repeat: no-repeat;   /* No repeating */
+  background-position: center;    /* Centered in header */
+  height: 300px;                  /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #98beb5;
+  color: #e0d6d6;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  margin-top: 135px; /* Moves the nav down from the top */
+}
+
+header nav a {
+  color: #570b0b;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(20, 26, 25, 0.927); /* Adjust based on logo visibility */
+}
+
+/* ===== BODY & LAYOUT ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(248, 248, 250, 0.392);
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f0efeb4b;
+}
+
+/* --- Style for dropdown --- */
+.search-form select {
+  padding: 12px 20px;
+  border: 2px solid #340439;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.3s ease;
+  background-color: white;
+  color: #430d0d;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 5L10 0H0Z' fill='%23340439'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+
+.search-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #16ae3a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #218838;
+}
+
+
+/* ===== VEHICLE IMAGE ===== */
+.vehicle-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  transition: none !important;
+  border-radius: 50px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  background: #ffffff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===== BULLET IMAGE ===== */
+.bullet-img {
+  border-radius: 12px; /* You can increase this value for more curve */
+}
+
+
+
+/* ===== CALL TO ACTION ===== */
+.cta {
+  background: #dff0ff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #98beb5;
+  color: rgb(17, 130, 102);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer nav ul li {
+  margin: 0.5rem 0;
+}
+
+footer nav ul li a {
+  color: rgb(1, 12, 11);
+  text-decoration: none;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.newsletter input[type="email"] {
+  padding: 12px 20px;
+  border: 2px solid #28a745;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  width: 250px;
+  transition: 0.3s ease;
+}
+
+.newsletter input[type="email"]:focus {
+  border-color: #218838;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #16ae3a;
+  color: rgb(22, 1, 1);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #218838;
+}
+
+/* css of browse.html */
+.vehicle-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
+
+.price-book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px; /* spacing between price and button */
+}
+
+.price-book p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.price-book button {
+  padding: 6px 12px;
+  background-color: #091f37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.price-book button:hover {
+  background-color: #061c33;
+}
+
+
+.vehicle-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+.vehicle-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.vehicle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vehicle-info h3 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.vehicle-info p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.vehicle-info button {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #139a64;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+.contact-redirect {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #e6f0ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Contact Page Main Section */
+main.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+main h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+main p {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  margin-top: 30px;
+}
+
+/* Contact Form Style */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #731212;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #07203a;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.contact-form button {
+  align-self: flex-start;
+  padding: 10px 24px;
+  background-color: #139a64;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #139a64;
+}
+
+/* Responsive Padding */
+@media (max-width: 600px) {
+  main.container {
+    padding: 15px;
+  }
+}
+
+
+/* Message Styling */
+#message-box {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
+
+/* Password Toggle */
+.password-toggle {
+  position: relative;
+  display: flex;
+}
+
+.password-toggle input {
+  flex: 1;
+}
+
+.password-toggle button {
+  margin-left: 8px;
+  background-color: #ccc;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.password-toggle button:hover {
+  background-color: #bbb;
+}
+
+/* Social Login Buttons */
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-login p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.google-btn,
+.facebook-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: #188c4e;
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+}
+
+.google-btn:hover {
+  background-color: #0c96838d;
+}
+
+
+
+
+
+/* Container remains same */
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.login-container h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #181d22, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+/* Colorful Inputs */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  font-size: 1em;
+  background-color: #f0f9ff;
+  color: #003366;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #00bcd4;
+  background-color: #e1f5fe;
+  outline: none;
+}
+
+/* Show/Hide Password */
+.password-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.password-toggle button {
+  background-color: #1e808d;
+  color: rgb(86, 37, 37);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-toggle button:hover {
+  background-color: #0097a7;
+}
+
+/* Colorful Login Button */
+.login-form button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(to right, #203750, #00c6ff);
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background: linear-gradient(to right, #0056b3, #0096c7);
+}
+
+/* Social login */
+.social-login p {
+  text-align: center;
+  color: #666;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+
+
+.google-btn {
+  background-color: #146f4f;
+}
+
+.google-btn:hover {
+  background-color: #0b5c58;
+}
+
+
+
+
+/* Flex row for label + input alignment */
+.login-form .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  width: 100px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.login-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  background-color: white;
+  font-size: 1em;
+  color: #003366;
+}
+
+/* Show password button aligned */
+.show-password-row button {
+  padding: 10px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.show-password-row button:hover {
+  background-color: #0097a7;
+}
+
+/* Same width for email & password input */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+}
+
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-row input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-row button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #0056b3;
+}
+
+.success-msg {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error-msg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================================
+   Testimonials Section Styles
+   ================================ */
+.testimonials {
+  padding: 2rem 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* ================================
+   Testimonial Grid
+   ================================ */
+.testimonial-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* final version keeps wrap for better responsiveness */
+}
+
+/* ================================
+   Testimonial Slide
+   ================================ */
+.testimonial-slide {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-slide:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-slide img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-slide p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-slide cite {
+  font-style: normal;
+  color: #888;
+}
+
+/* ================================
+   Responsive Styles
+   ================================ */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .testimonial-slide {
+    width: 100%;
+  }
+}
+
+/* ================================
+   Utility Classes
+   ================================ */
+.hidden {
+  display: none;
+}
+
+.success-msg {
+  color: green;
+}
+
+.error-msg {
+  color: red;
+}
+
+.noscript-msg {
+  background: #ffdddd;
+  color: #a00;
+  padding: 1rem;
+  text-align: center;
+}

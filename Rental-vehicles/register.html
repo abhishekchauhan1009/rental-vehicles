@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – UP22MOTO</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="register.js"></script>
+</head>
+<body>
+
+  <noscript>
+    <div class="noscript-msg">This page requires JavaScript to function properly.</div>
+  </noscript>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Book Now</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" maxlength="10" minlength="10" pattern="\d{10}" required />
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+
+      <div class="form-row">
+        <button type="submit">Register</button>
+      </div>
+
+      <div id="otpSection" class="hidden">
+        <div class="form-row">
+          <label for="otp">Enter OTP:</label>
+          <input type="text" id="otp" name="otp" maxlength="6" pattern="\d{6}" />
+        </div>
+        <div class="form-row">
+          <button type="button" id="verifyOtpBtn">Verify OTP</button>
+        </div>
+      </div>
+
+      <div id="successMsg" class="success-msg hidden">Registration successful! Redirecting...</div>
+      <div id="errorMsg" class="error-msg hidden">OTP verification failed. Try again.</div>
+
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </main>
+
+</body>
+</html>
